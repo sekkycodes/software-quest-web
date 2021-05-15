@@ -1,25 +1,19 @@
-import Vue from 'vue'
+import {createApp} from "vue";
 import Vuex from "vuex";
 import App from './App.vue'
 
 import "bootstrap";
 import "bootswatch/dist/darkly/bootstrap.min.css";
 import "moment";
-import BootstrapVue from "bootstrap-vue";
 import "bootstrap-vue/dist/bootstrap-vue.css"
-import VueToastr from "vue-toastr";
+import router from "./router/index"
 
-Vue.config.productionTip = false
-Vue.use(BootstrapVue);
-Vue.use(Vuex);
-Vue.use(VueToastr);
-
-const store = new Vuex.Store({
+const store = new Vuex.createStore({
   state: {},
   mutations: {},
 });
 
-new Vue({
-  render: h => h(App),
-  store,
-}).$mount('#app')
+const app = createApp(App);
+app.use(router)
+app.use(store);
+app.mount("#app");
