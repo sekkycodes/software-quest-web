@@ -1,9 +1,11 @@
 <template>
   <div id="app-container">
-    <div id="nav">
-      <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'Quests' }">Quests</router-link>
-    </div>
+    <header>
+      <nav>
+        <router-link :to="{ name: 'Home' }">Home</router-link>
+        <router-link :to="{ name: 'Quests' }">Quests</router-link>
+      </nav>
+    </header>
     <router-view/>
   </div>
 </template>
