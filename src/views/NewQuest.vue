@@ -1,5 +1,5 @@
 <template>
   <main>
-    <h2>Quests Page</h2>
+    <h2>New Quest</h2>
   </main>
 </template>

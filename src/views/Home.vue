@@ -5,20 +5,22 @@
       <div>The place to have some software adventures</div>
     </section>
     <GithubConnection/>
+    <HomeActions/>
   </main>
 </template>
 
 <script>
 import GithubConnection from "@/components/GithubConnection";
+import HomeActions from "@/components/HomeActions";
 
 export default {
-  components: {GithubConnection}
+  components: {GithubConnection, HomeActions}
 }
 </script>
 
 <style>
 .header-box {
-  margin-top: 2em;
+  margin: 2em;
   width: 100%;
   text-align: center;
 }

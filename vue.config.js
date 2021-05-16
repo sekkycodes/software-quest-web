@@ -1,18 +1,18 @@
-const path = require('path')
-
 module.exports = {
-  chainWebpack: config => {
-    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
-    types.forEach(type => addStyleResource(config.module.rule('sass').oneOf(type)))
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `
+          @import "@/scss/_variables.scss";
+        `
+      }
+    }
   },
-}
-
-function addStyleResource (rule) {
-  rule.use('style-resource')
-    .loader('style-resources-loader')
-    .options({
-      patterns: [
-        path.resolve(__dirname, './src/scss/variables.scss'),
-      ],
-    })
+  chainWebpack: config => {
+    config.module
+        .rule('images')
+        .use('url-loader')
+        .loader('url-loader')
+        .tap(options => Object.assign(options, {limit: 10240}))
+  },
 }

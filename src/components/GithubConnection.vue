@@ -1,18 +1,23 @@
 <template>
-  <section class="github-connection-container">
+  <section class="github-connection-container container">
     <p>Connect to your github account</p>
-    <button>Connect</button>
+    <button class="btn btn-secondary">Connect</button>
   </section>
 </template>
 
 <script>
 export default {
-  name: "GithubConnection",
+  name: "GithubConnection"
 }
 </script>
 
 <style>
 .github-connection-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
   border: 2px solid gray;
+  border-radius: 15px;
+  text-align: center;
 }
 </style>

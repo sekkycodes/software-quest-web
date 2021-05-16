@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Home from "@/views/Home";
 import Quests from "@/views/Quests";
+import NewQuest from "@/views/NewQuest"
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: "/quests",
     name: "Quests",
     component: Quests,
+  },
+  {
+    path: "/new-quest",
+    name: "NewQuest",
+    component: NewQuest
   },
 ];
 
